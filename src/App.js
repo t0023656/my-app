@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./styles/style.css";
+import Friend from "./Friend";
 
-function App() {
+const App = () => {
+  const [name, setName] = useState("kusodir");
+  const changeNameHandler = () => {
+    setName("t0023656");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{name}</h1>
+      <button onClick={changeNameHandler}>change name</button>
     </div>
   );
-}
+};
 
 export default App;
